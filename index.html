@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-
+    <h1>My External Page</h1>
     <div id="lightningout"></div>
 
     <script src="https://dsg00000gchzr2a1.test1.my.pc-rnd.salesforce.com/lightning/lightning.out.js"></script>
@@ -20,10 +20,11 @@
             'lightningout', // the DOM location to insert the component
             function (cmp) {
               // callback when component is created and active on the page
+               console.log('The component was created.');
             }
           );
         },
-        "https://dsg00000gchzr2a1.test1.my.pc-rnd.site.com"
+        "https://dsg00000gchzr2a1.test1.lightning.pc-rnd.force.com"
       );
     </script>
   </body>
