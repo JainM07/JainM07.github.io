@@ -1,31 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <h1>My External Page</h1>
-    <div id="lightningout"></div>
 
-    <script src="https://dsg00000gchzr2a1.test1.my.pc-rnd.salesforce.com/lightning/lightning.out.js"></script>
-    <script>
-      $Lightning.use(
-        'c:LightningOutDependencyApp', // name of the Lightning app
-        function () {
-          // Callback once framework and app loaded
-          $Lightning.createComponent(
-            'c:helloWorld', // top-level component of your app
-            {}, // attributes to set on the component when created
-            'lightningout', // the DOM location to insert the component
-            function (cmp) {
-              // callback when component is created and active on the page
-               console.log('The component was created.');
-            }
-          );
-        },
-        "https://dsg00000gchzr2a1.test1.lightning.pc-rnd.force.com"
-      );
-    </script>
-  </body>
+<html lang="en-US">
+<body>
+<script src="https://dsg000008a0or2ak.demo.test1.my.pc-rnd.site.com/lightning/lightning.out.js"></script> 
+            <!--  <My Domain URL>/lightning/lightning.out.js -->
+<div ng-app="myApp" ng-controller="myCtrl"> 
+
+<p>Lightning Out App Test</p>
+
+</div>
+<div id="divlightning">
+</div>
+<script>
+            $Lightning.use("c:LightningOutAppGuest", function() {
+              $Lightning.createComponent("c:AuraComLightningOutTest", 
+              { },
+              "divlightning",
+              function(cmp) {
+                  console.log('AuraComLightningOutTest created');
+              }); 
+  
+             $Lightning.createComponent("c:bikeCard", 
+              { },
+              "divlightning",
+              function(cmp) {
+                     console.log('bikeCard created');
+              });
+            },
+
+           'https://dsg000008a0or2ak.demo.test1.my.pc-rnd.site.com'//experience site url
+                           
+        );                   
+</script>   
+</body>
 </html>
