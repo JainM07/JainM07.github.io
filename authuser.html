@@ -11,7 +11,14 @@
 </div>
 <script>
             $Lightning.use("c:LightningOutAppAuth", function() {
-             
+                        
+              $Lightning.createComponent("c:AuraComLightningOutTest", 
+              { },
+              "divlightning",
+              function(cmp) {
+                  console.log('AuraComLightningOutTest created');
+              }); 
+                        
              $Lightning.createComponent("c:bikeCard", 
               { },
               "divlightning",
@@ -20,7 +27,7 @@
               });
             },
 
-           'https://dsg00000js2wl2ar.test1.lightning.pc-rnd.force.com',
+           'https://dsg00000js2wl2ar.test1.lightning.pc-rnd.site.com',
            //lightningEndPointURI, if you use experience site url, the authToken below will also need to be a site user token test
             '00DSG00000Js2wL!AQEAQLzZD28gyuSDtKDefLYEqJCW8AuoOkVOTjCnI5wEL7OLAXqW4lgD7EsuK9.ObrzW.TuxY5dVzR39plGL5hsTIfu6wkjt'
                            
